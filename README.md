@@ -32,7 +32,8 @@ The "Run Locally?" column indicates whether the activity can be run locally on y
 * If ❌ it means the activity is designed to be run in a cloud environment or requires specific hardware or software that may not be available on your local machine.
 * If ⚙️, it means that the activity is a work in progress that I have not yet finished.
 
-| Activity | Description | Tools | Technologies | Blog Post | Run Locally? |
-|:---:|:---:|:---:|:---:|:---:|:---:|
+| Activity | Description | Tools & Technologies | Blog Post | Run Locally? |
+|:---|:---|:---|:---|:---:|:---:|
+| [EdgeAI MLOps](edgeai-mlops) | A series of notebooks focused on demonstrating MLOPs practices in the context of industrial EdgeAI applications. Based on a [Doulos Workshop](https://github.com/Doulos/EdgeAI-Demo) I attended in 2023. | SoX, TensorFlow, TFLite, ONNX, Quantization, MQTT, Flask, REST API | [Blog Link]() | ⚙️ |
 
 
