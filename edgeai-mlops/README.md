@@ -8,13 +8,11 @@ In this folder, I am revising several MLOps concepts, tools and techniques. The 
 * 1. [Overview](#Overview)
 * 2. [Getting Started](#GettingStarted)
 * 3. [Part 1: Audio Data Preprocessing with SoX](#Part1:AudioDataPreprocessingwithSoX)
-* 4. [Part 2: Training Networks with Tensorflow: Fully Connecteded, CNNs, RNNs, LSTMs and GRUs](#Part2:TrainingNetworkswithTensorflow:FullyConnectededCNNsRNNsLSTMsandGRUs)
-* 5. [Part 3: Models for EdgeAI with TFLite and ONNX](#Part3:ModelsforEdgeAIwithTFLiteandONNX)
-* 6. [Part 4: Model Inferencing with TFLite and ONNX Runtimes](#Part4:ModelInferencingwithTFLiteandONNXRuntimes)
-* 7. [Part 5: Quantization for TinyML](#Part5:QuantizationforTinyML)
-* 8. [Part 6: Object Detection with MobileNet Single Shot Detector (SSD)](#Part6:ObjectDetectionwithMobileNetSingleShotDetectorSSD)
-* 9. [Part 7: Object Detection with Quantized Custom CNNs](#Part7:ObjectDetectionwithQuantizedCustomCNNs)
-* 10. [Part 8: Model Inference on MQTT, Python Flask and REST APIs](#Part8:ModelInferenceonMQTTPythonFlaskandRESTAPIs)
+* 4. [Part 2: From TensorFlow V2 to TFLite, ONNX and Quantized Models for EdgeAI](#Part2:FromTensorFlowV2toTFLiteONNXandQuantizedModelsforEdgeAI)
+* 5. [Part 3: TFLite and ONNX Models for EdgeAI](#Part3:TFLiteandONNXModelsforEdgeAI)
+* 6. [Part 4: Object Detection with MobileNet Single Shot Detector (SSD)](#Part4:ObjectDetectionwithMobileNetSingleShotDetectorSSD)
+* 7. [Part 5: Object Detection with Quantized Custom CNNs](#Part5:ObjectDetectionwithQuantizedCustomCNNs)
+* 8. [Part 6: Model Inference on MQTT, Python Flask and REST APIs](#Part6:ModelInferenceonMQTTPythonFlaskandRESTAPIs)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -32,10 +30,28 @@ As my PhD thought me, data acquisition and preprocessing is a crucial, if not th
 
 In this notebook, I use the [SoX (Sound eXchange)](https://github.com/chirlu/sox) command line tool to preprocess audio data. I start with a raw audio input file, which I then filter, trim and convert to a spetrogram representation to present to a model for training or inference.
 
-##  4. <a name='Part2:TrainingNetworkswithTensorflow:FullyConnectededCNNsRNNsLSTMsandGRUs'></a>Part 2: Training Networks with Tensorflow: Fully Connecteded, CNNs, RNNs, LSTMs and GRUs
-##  5. <a name='Part3:ModelsforEdgeAIwithTFLiteandONNX'></a>Part 3: Models for EdgeAI with TFLite and ONNX
-##  6. <a name='Part4:ModelInferencingwithTFLiteandONNXRuntimes'></a>Part 4: Model Inferencing with TFLite and ONNX Runtimes
-##  7. <a name='Part5:QuantizationforTinyML'></a>Part 5: Quantization for TinyML
-##  8. <a name='Part6:ObjectDetectionwithMobileNetSingleShotDetectorSSD'></a>Part 6: Object Detection with MobileNet Single Shot Detector (SSD)
-##  9. <a name='Part7:ObjectDetectionwithQuantizedCustomCNNs'></a>Part 7: Object Detection with Quantized Custom CNNs
-##  10. <a name='Part8:ModelInferenceonMQTTPythonFlaskandRESTAPIs'></a>Part 8: Model Inference on MQTT, Python Flask and REST APIs
+##  4. <a name='Part2:FromTensorFlowV2toTFLiteONNXandQuantizedModelsforEdgeAI'></a>Part 2: From TensorFlow V2 to TFLite, ONNX and Quantized Models for EdgeAI
+
+My daily driver for machine learning is PyTorch, but TensorFlow/Keras is also a very popular framework. I have worked extensively with TensorFlow V1 in my Master's thesis ([see repo here](https://github.com/AndreiRoibu/DeepReinforcementLearning)), but not so much with TensorFlow V2 since it came out.
+
+In this notebook, I revise the key concepts of building and training neural networks with TensorFlow/Keras. These are useful to know, as most EdgeAI models I have encountered are delivered in either TFLite or ONNX format.
+
+I will implement the following toy models:
+- Fully Connected Network
+- LeNet-style CNN
+- LSTM and GRU RNNs
+
+I will also look at how we can implement transfer learning with TensorFlow. This is something I did extensively in PyTorch during my PhD's deep data-fusion experiments, but rarely in TensorFlow.
+
+Platforms like TensorFlow, PyTorch or Keras are great for building and training models, but they are not optimized for deployment on edge devices. For that, we need to convert our models to a more efficient format, such as TFLite or ONNX.
+
+Once we do this, we can use tools like Netron to visualize and inspect the model architecture, layers, parameters and operations, and ONNX Runtime to run inference on the model and check it works well.
+
+Finally, we can also quantize our models to reduce their size and improve their performance on edge devices. This is especially important for TinyML applications, where resources are limited.
+
+##  5. <a name='Part3:TFLiteandONNXModelsforEdgeAI'></a>Part 3: TFLite and ONNX Models for EdgeAI
+
+
+##  6. <a name='Part4:ObjectDetectionwithMobileNetSingleShotDetectorSSD'></a>Part 4: Object Detection with MobileNet Single Shot Detector (SSD)
+##  7. <a name='Part5:ObjectDetectionwithQuantizedCustomCNNs'></a>Part 5: Object Detection with Quantized Custom CNNs
+##  8. <a name='Part6:ModelInferenceonMQTTPythonFlaskandRESTAPIs'></a>Part 6: Model Inference on MQTT, Python Flask and REST APIs
