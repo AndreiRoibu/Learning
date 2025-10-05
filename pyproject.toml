@@ -33,7 +33,16 @@ dev-dependencies = [
     "ipython",
     "jupyter",
     "matplotlib",
-    "seaborn"
+    "seaborn",
+    "tensorflow",
+    "scikit-learn",
+    "scipy",
+    "pandas",
+    "onnx",
+    "tf2onnx @ git+https://github.com/onnx/tensorflow-onnx",
+    "onnxruntime",
+    "torch",
+    "netron",
 ]
 
 [tool.uv.workspace]
