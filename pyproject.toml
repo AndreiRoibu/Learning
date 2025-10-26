@@ -29,7 +29,7 @@ dev-dependencies = [
     "mkdocs>=1.4.2",
     "mkdocs-material>=8.5.10",
     "mkdocstrings[python]>=0.26.1",
-    "numpy",
+    "numpy>=1.26,<2",
     "ipython",
     "jupyter",
     "matplotlib",
@@ -45,6 +45,9 @@ dev-dependencies = [
     "netron",
     "tensorflow_model_optimization",
     "tf-keras",
+    "datasets",
+    "transformers",
+    "alive-progress",
 ]
 
 [tool.uv.workspace]
