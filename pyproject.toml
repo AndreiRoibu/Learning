@@ -45,6 +45,9 @@ dev-dependencies = [
     "netron",
     "tensorflow_model_optimization",
     "tf-keras",
+    "datasets",
+    "transformers",
+    "alive-progress",
 ]
 
 [tool.uv.workspace]
